@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Title Case</title>
+     <title>Title  Case</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/forms.css">
-  <style>
-    #output{
-      border-radius:5px;
-      min-height:40px;
-      border:1px solid black;
-      width:50%;
-      margin:auto;
-      font-size:x-large;
-    }
-  </style>
+    <style>
+      #output{
+        border-radius:5px;
+        min-height:40px;
+        border:1px solid black;
+        width:50%;
+        margin:auto;
+        font-size:x-large;
+      }
+    </style>
  </head>
  <body>
      <header>
@@ -31,45 +31,47 @@
      
    <main class="wrapper">
  
+<p>This Title Case uses JavaScript and HTML to conduct an input and output scenario. This website allows you to type an input into the box on the bottom and submit, when submitted the text is displayed in the bigger box right above as the output. </p>
+
     <h2 class="subheader">Place form code below:</h2>
     <div id="output"></div>
-    <form method="post" action="" class="main-form"> 
-<div>
-  <label for="input">Input</label><br>
-  <input type="text" name="input" id="input" placeholder="Input" required autofocus>
-</div>
-<div>
-  <input type="submit" id="submit">
-</div>
+    <form method="post" action="" class="main-form">
+      <div>
+        <label for="input">Input</label><br>
+        <input type="text" name="input" id="input" placeholder="Input" required autofocus>
+      </div>
+       <div>
+        <input type="submit" id="submit">
+      </div>
     </form>
     <footer>
-      <p><small>&copy; 2023-<span id="this-year"></span> by 
+      <p><small>&copy; 2021-<span id="this-year"></span> by 
           Linda Eschete, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
     </footer>
   </main>
-  <script src="js/main.js"></script>   
+  <script src="js/main.js"></script>
   <script>
 
     function titleCase(str){
-return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
 
-  const mySubmit = document.querySelector("#submit");
-console.log(mySubmit);
+    const mySubmit = document.querySelector("#submit");
+    console.log(mySubmit);
 
-mySubmit.addEventListener("click",function(ev){
-ev.preventDefault();
-const myInput = document.querySelector("#input");
-const myOutput = document.querySelector("#output");
-let myString = myInput.value;
-myString = tit;eCase(myString);
-myOutput.innerHTML = myString;
-//alert(myInput.value);
-});
+    mySubmit.addEventListener("click",function(ev){
+      ev.preventDefault();
+      const myInput = document.querySelector("#input");
+      const myOutput = document.querySelector("#output");
+      let myString = myInput.value;
+      myString = titleCase(myString);
+      myOutput.innerHTML = myString;
+      //alert(myInput.value);
+    });
 
-  </script>
+  </script>   
  </body>
 </html>
